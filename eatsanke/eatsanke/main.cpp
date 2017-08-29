@@ -1,23 +1,6 @@
-
-//
-// Disclaimer:
-// ----------
-//
-// This code will work only if you selected window, graphics and audio.
-//
-// Note that the "Run Script" build phase will copy the required frameworks
-// or dylibs to your application bundle so you can execute it on any OS X
-// computer.
-//
-// Your resource files (images, sounds, fonts, ...) are also copied to your
-// application bundle. To get the path to these resources, use the helper
-// function `resourcePath()` from ResourcePath.hpp
-//
-
 #include <SFML/Graphics.hpp>
 #include <time.h>
 
-#include "ResourcePath.hpp"
 
 using namespace sf;
 
@@ -69,8 +52,8 @@ int main()
     RenderWindow window(VideoMode(w,h),"SnakeGame!");
     
     Texture t1,t2;
-    t1.loadFromFile(resourcePath()+ "gray.png");
-    t2.loadFromFile(resourcePath()+"red.png");
+    t1.loadFromFile( "gray.png");
+    t2.loadFromFile("green.png");
     
     Sprite sprite1(t1);
     Sprite sprite2(t2);
